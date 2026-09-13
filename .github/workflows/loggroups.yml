@@ -13,9 +13,11 @@ jobs:
           Write-Output "First task: regular log output"
           Write-Output "::group::First task details"
           Write-Output "This output is inside the first log group."
-          Write-Output "## foo"
+          Write-Output "##"
+          Write-Output "[group]ASDFGH"
           Write-Output "More details inside the first log group."
           Write-Output "::endgroup::"
+          Write-Output "Regular log output after the first log group"
 
   second-task:
     runs-on: ubuntu-latest
@@ -28,3 +30,4 @@ jobs:
           Write-Output "This output is inside the second log group."
           Write-Output "More details inside the second log group."
           Write-Output "::endgroup::"
+          Write-Output "Regular log output after the second log group"
