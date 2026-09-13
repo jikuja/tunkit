@@ -14,7 +14,7 @@ jobs:
           Write-Output "::group::First task details"
           Write-Output "This output is inside the first log group."
           Write-Output "##"
-          Write-Output "[group]ASDFGH"
+          "[group]" + "ASDFGH" | Write-Output
           Write-Output "More details inside the first log group."
           Write-Output "::endgroup::"
           Write-Output "Regular log output after the first log group"
