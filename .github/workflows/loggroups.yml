@@ -13,9 +13,9 @@ jobs:
           Write-Output "First task: regular log output"
           Write-Output "::group::First task details"
           Write-Output "This output is inside the first log group."
-          Write-Host "[group]"
+          Write-Host "group]"
           Write-Host "1"
-          Write-Host "[endgroup]"
+          Write-Host "endgroup]"
           Write-Host "3"
           Write-Output "More details inside the first log group."
 
