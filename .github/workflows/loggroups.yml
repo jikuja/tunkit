@@ -1,0 +1,30 @@
+name: PowerShell log groups
+
+on:
+  workflow_dispatch:
+
+jobs:
+  first-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print first task logs
+        shell: pwsh
+        run: |
+          Write-Output "First task: regular log output"
+          Write-Output "::group::First task details"
+          Write-Output "This output is inside the first log group."
+          Write-Output "## foo"
+          Write-Output "More details inside the first log group."
+          Write-Output "::endgroup::"
+
+  second-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print second task logs
+        shell: pwsh
+        run: |
+          Write-Output "Second task: regular log output"
+          Write-Output "::group::Second task details"
+          Write-Output "This output is inside the second log group."
+          Write-Output "More details inside the second log group."
+          Write-Output "::endgroup::"
